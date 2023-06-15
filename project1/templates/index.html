@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <title>Курс валют</title>
+</head>
+<body>
+
+<!-- таблица валют -->
+
+<div class="frame">
+    <!-- левая колонка с названиями -->
+    <div class="transfer">
+        <!-- цикл создаёт строчки с названиями в колонке -->
+        {% for name in names %}
+            <div class="content">
+                <h4>{{name}}</h4>
+            </div>
+        {% endfor %}
+    </div>
+    <!-- правая колонка с ценами -->
+    <div class="transfer" id="transfer2">
+        <!-- цикл создаёт строчки с ценами в колонке -->
+        {% for value in values %}
+            <div class="content" id="next_content">
+                <h4>{{value}}</h4>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- калькулятор валют -->
+
+<!-- создаёт рамочку -->
+<div class="calculator">
+    <!-- текстовые поля -->
+    <form action="">
+        <textarea name="name_v0" rows="1" cols="36" placeholder="Из какой валюты перевести"></textarea><br>
+        <textarea name="value_0" rows="1" cols="36" placeholder="Сколько валюты перевести" class="how_much"></textarea><br>
+        <textarea name="name_v1" rows="1" cols="36" placeholder="В какую валюту перевести" class="translate_into"></textarea>
+        <button type="submit">Посчитать</button>
+    </form>
+    <h5>Ответ:{{answer}}</h5>
+</div>
+</body>
+</html>

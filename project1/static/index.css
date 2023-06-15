@@ -1,0 +1,53 @@
+
+/* таблица */
+
+/* рамочка */
+.frame {
+    background: black;
+    height: 590px;
+    width: 393px;
+}
+/* белый фон */
+.content {
+    background: white;
+    margin: 1px;
+    width: 330px;
+}
+/* делает отступ для текста от рамочки и убирает лишние отступы */
+h4{
+    margin: 0px 0px 0px 3px;
+}
+/* позволяет перенести вторую колонну в право а также убирает отступ */
+.transfer {
+    display:inline-block;
+    width: 327px;
+}
+/* фиксирует ширину белого фона у второй колоны */
+#next_content {
+    width: 60px
+}
+/* убирает ненужный отступ */
+#transfer2 {
+    width: 60px;
+}
+
+/* калькулятор */
+
+.calculator {
+    position: relative;
+    border: 2px solid black;
+    left: 450px;
+    top: -500px;
+    width: 800px;
+    height: 400px;
+}
+/* изменение местоположения текстового поля для внесения другой валюты */
+.translate_into {
+    position: absolute;
+    left: 400px;
+    top: 0px;
+}
+/* изменение местоположения текстового поля для внесения колличества валюты */
+.how_much {
+    position: relative;
+}

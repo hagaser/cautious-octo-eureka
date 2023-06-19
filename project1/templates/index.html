@@ -37,13 +37,16 @@
 <div class="calculator">
     <!-- текстовые поля -->
     <form action="">
+	<!-- валюта из которой нужно перевести -->
         <select name="name_v0">
             {% for name in names %}
                 <option>{{name}}</option>
             {% endfor %}
         </select>
         Перевести в<br><br>
+	<!-- количество валюты -->
         <textarea name="value_0" rows="1" cols="36" placeholder="Сколько валюты перевести" class="how_much"></textarea><br>
+	<!-- валюта в которую нужно перевести -->
         <select name="name_v1" class="translate_into">
             {% for name in names %}
                 <option>{{name}}</option>

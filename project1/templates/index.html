@@ -37,9 +37,18 @@
 <div class="calculator">
     <!-- текстовые поля -->
     <form action="">
-        <textarea name="name_v0" rows="1" cols="36" placeholder="Из какой валюты перевести"></textarea><br>
+        <select name="name_v0">
+            {% for name in names %}
+                <option>{{name}}</option>
+            {% endfor %}
+        </select>
+        Перевести в<br><br>
         <textarea name="value_0" rows="1" cols="36" placeholder="Сколько валюты перевести" class="how_much"></textarea><br>
-        <textarea name="name_v1" rows="1" cols="36" placeholder="В какую валюту перевести" class="translate_into"></textarea>
+        <select name="name_v1" class="translate_into">
+            {% for name in names %}
+                <option>{{name}}</option>
+            {% endfor %}
+        </select>
         <button type="submit">Посчитать</button>
     </form>
     <h5>Ответ:{{answer}}</h5>
